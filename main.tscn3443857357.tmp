@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4vib3ghdfn2g"]
+
+[ext_resource type="Script" uid="uid://cn6okuktg42c3" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://dkcxalu8f7y08" path="res://thumb-1920-1379110.jpg" id="2_0xm2m"]
+
+[node name="Main" type="Control" node_paths=PackedStringArray("_CardNameTextLine", "_GenerateButton", "_PackOptionButton", "_CardIDSpinBox", "_ElementIndexOptionButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ig7tw")
+_CardNameTextLine = NodePath("DataContainer/CardNameLine")
+_GenerateButton = NodePath("DataContainer/GenerateButton")
+_PackOptionButton = NodePath("DataContainer/PackOptionButton")
+_CardIDSpinBox = NodePath("DataContainer/CardIDSpinBox")
+_ElementIndexOptionButton = NodePath("DataContainer/ElementOptionButton")
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color(0.25, 0.25, 0.25, 1)
+layout_mode = 0
+offset_left = -655.0
+offset_top = -238.0
+offset_right = 1265.0
+offset_bottom = 842.0
+texture = ExtResource("2_0xm2m")
+
+[node name="DataContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = -94.0
+offset_right = 158.0
+offset_bottom = 262.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="CardNameLine" type="LineEdit" parent="DataContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+placeholder_text = "Card Name..."
+
+[node name="GenerateButton" type="Button" parent="DataContainer"]
+layout_mode = 2
+disabled = true
+text = "Generate"
+
+[node name="PackLabel" type="Label" parent="DataContainer"]
+layout_mode = 2
+text = "Card Pack"
+horizontal_alignment = 2
+
+[node name="PackOptionButton" type="OptionButton" parent="DataContainer"]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "Tetramon"
+popup/item_0/id = 0
+popup/item_1/text = "Megabot"
+popup/item_1/id = 1
+popup/item_2/text = "FantasyRPG"
+popup/item_2/id = 2
+popup/item_3/text = "CatJob"
+popup/item_3/id = 3
+
+[node name="CardIDLabel" type="Label" parent="DataContainer"]
+layout_mode = 2
+text = "Card ID"
+horizontal_alignment = 2
+
+[node name="CardIDSpinBox" type="SpinBox" parent="DataContainer"]
+layout_mode = 2
+alignment = 1
+editable = false
+
+[node name="ElementIndexLabel" type="Label" parent="DataContainer"]
+layout_mode = 2
+tooltip_text = "This is the frame of the card"
+mouse_filter = 1
+text = "Element Index"
+horizontal_alignment = 2
+
+[node name="ElementOptionButton" type="OptionButton" parent="DataContainer"]
+layout_mode = 2
+item_count = 8
+popup/item_0/text = "Fire"
+popup/item_0/id = 0
+popup/item_1/text = "Earth"
+popup/item_1/id = 1
+popup/item_2/text = "Wind"
+popup/item_2/id = 2
+popup/item_3/text = "Water"
+popup/item_3/id = 3
+popup/item_4/text = "Destiny"
+popup/item_4/id = 4
+popup/item_5/text = "Megabot"
+popup/item_5/id = 5
+popup/item_6/text = "FantasyRPG"
+popup/item_6/id = 6
+popup/item_7/text = "CatJob"
+popup/item_7/id = 7

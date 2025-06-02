@@ -1,0 +1,647 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4vib3ghdfn2g"]
+
+[ext_resource type="Theme" uid="uid://c2d2k8q0jvu0p" path="res://CardFileTheme.tres" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://cn6okuktg42c3" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://dkcxalu8f7y08" path="res://thumb-1920-1379110.jpg" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://di8wxtaeu4xle" path="res://DELETEME.gd" id="4_1bvp3"]
+
+[node name="Main" type="Control" node_paths=PackedStringArray("_CardNameTextLine", "_GenerateButton", "_PackOptionButton", "_CardIDSpinBox", "_ElementIndexOptionButton", "_RarityOptionButton", "_RolesOptionButton", "_SkillsOptionButton", "_ArtistNameTextLine", "_CardDescriptionTextLine", "_NewCardButton", "_UseImageButton", "_NewCardCreator", "_PackAdditionOptionButton", "_AdditionPackSpinBox", "_CountUpDownOptionButton", "_GenerateCardsFromImageButton", "_ExistingCardCreator", "_PreviousEvolutionLine", "_NextEvolutionLine", "_CardImageSelectLine", "_CardImageSelectButton", "_HPSpinBox", "_HPLevelAddSpinBox", "_MagicSpinBox", "_MagicLevelAddSpinBox", "_SpeedSpinBox", "_SpeedLevelUpSpinBox", "_SpritSpinBox", "_SpritLevelUpSpinBox", "_StrengthSpinBox", "_StrengthLevelUpSpinBox", "_VitalitySpinBox", "_VitalityLevelUpSpinBox", "_PopWindow", "_FilePicker", "_BrowseButton", "_PromptWindow", "_PathDialog", "_AnotherImageButton", "_FeedbackLabel", "_BackButton", "_BackButton2", "_ImageDialog")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_h2yge")
+script = ExtResource("1_ig7tw")
+_CardNameTextLine = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer/CardNameLine")
+_GenerateButton = NodePath("NewCards/NewCardCreatorDetails/HBoxContainer/GenerateButton")
+_PackOptionButton = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer/PackOptionButton")
+_CardIDSpinBox = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer/CardIDSpinBox")
+_ElementIndexOptionButton = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer/ElementOptionButton")
+_RarityOptionButton = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer/RarityOptionButton")
+_RolesOptionButton = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer/RolesOptionButton")
+_SkillsOptionButton = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer/SkillsOptionButton")
+_ArtistNameTextLine = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer/ArtistNameLine")
+_CardDescriptionTextLine = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer/DescriptionLine")
+_NewCardButton = NodePath("Window/MarginContainer/VBoxContainer/HBoxContainer/NewCardButton")
+_UseImageButton = NodePath("Window/MarginContainer/VBoxContainer/HBoxContainer/UseImageButton")
+_NewCardCreator = NodePath("NewCards/NewCardCreatorDetails")
+_PackAdditionOptionButton = NodePath("UsingImages/ExistingCardDetails/CardInfo/GridContainer/PackAdditionOptionButton")
+_AdditionPackSpinBox = NodePath("UsingImages/ExistingCardDetails/CardInfo/GridContainer/AdditionPackSpinBox")
+_CountUpDownOptionButton = NodePath("UsingImages/ExistingCardDetails/CardInfo/GridContainer/CountUpDownOptionButton")
+_GenerateCardsFromImageButton = NodePath("UsingImages/ExistingCardDetails/HBoxContainer/GenerateCards")
+_ExistingCardCreator = NodePath("UsingImages/ExistingCardDetails")
+_PreviousEvolutionLine = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer/PreviousEvolutionLine")
+_NextEvolutionLine = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer/NextEvolutionLine2")
+_CardImageSelectLine = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer/HBoxContainer/CardImageSelectLineEdit")
+_CardImageSelectButton = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer/HBoxContainer/CardImageSelectButton")
+_HPSpinBox = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer2/HPSpinBox")
+_HPLevelAddSpinBox = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer2/HPLevelAddSpinBox")
+_MagicSpinBox = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer2/MagicSpinBox")
+_MagicLevelAddSpinBox = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer2/MagicLevelAddSpinBox")
+_SpeedSpinBox = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer2/SpeedSpinBox")
+_SpeedLevelUpSpinBox = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer2/SpeedLevelAddSpinBox")
+_SpritSpinBox = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer2/SpritSpinBox")
+_SpritLevelUpSpinBox = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer2/SpritLevelAddSpinBox")
+_StrengthSpinBox = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer2/StrengthSpinBox")
+_StrengthLevelUpSpinBox = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer2/StrengthLevelAddSpinBox")
+_VitalitySpinBox = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer2/VitalitySpinBox")
+_VitalityLevelUpSpinBox = NodePath("NewCards/NewCardCreatorDetails/CardData/DataContainer2/VitalityLevelAddSpinBox")
+_PopWindow = NodePath("Window")
+_FilePicker = NodePath("FilePicker")
+_BrowseButton = NodePath("PromptWindow/CenterContainer/HBoxContainer/BrowseButton")
+_PromptWindow = NodePath("PromptWindow")
+_PathDialog = NodePath("PathFileDialog")
+_AnotherImageButton = NodePath("UsingImages/ExistingCardDetails/HBoxContainer/AnotherImageButton")
+_FeedbackLabel = NodePath("FeedbackLabel")
+_BackButton = NodePath("NewCards/NewCardCreatorDetails/HBoxContainer/BackButton")
+_BackButton2 = NodePath("UsingImages/ExistingCardDetails/HBoxContainer/BackButton")
+_ImageDialog = NodePath("FilePicker2")
+metadata/_edit_vertical_guides_ = [532.0, 382.0]
+
+[node name="Background" type="TextureRect" parent="." node_paths=PackedStringArray("parent")]
+self_modulate = Color(0.0823529, 0.117647, 0.164706, 1)
+layout_mode = 0
+offset_left = -655.0
+offset_top = -238.0
+offset_right = 1265.0
+offset_bottom = 842.0
+texture = ExtResource("2_0xm2m")
+script = ExtResource("4_1bvp3")
+parent = NodePath("..")
+
+[node name="NewCards" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="NewCardCreatorDetails" type="VBoxContainer" parent="NewCards"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Labels" type="HBoxContainer" parent="NewCards/NewCardCreatorDetails"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="NewCards/NewCardCreatorDetails/Labels"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Card Data"
+horizontal_alignment = 1
+
+[node name="CardData" type="HBoxContainer" parent="NewCards/NewCardCreatorDetails"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 150
+alignment = 1
+
+[node name="DataContainer" type="GridContainer" parent="NewCards/NewCardCreatorDetails/CardData"]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="CardNameLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+text = "Card Name"
+horizontal_alignment = 2
+
+[node name="CardNameLine" type="LineEdit" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+placeholder_text = "Card Name..."
+caret_blink = true
+
+[node name="CardImageSelectionLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+text = "Select Image"
+horizontal_alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+theme_override_constants/separation = 19
+alignment = 1
+
+[node name="CardImageSelectLineEdit" type="LineEdit" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+placeholder_text = "Blank for None..."
+
+[node name="CardImageSelectButton" type="Button" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "...."
+
+[node name="ArtistLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+text = "Artist"
+horizontal_alignment = 2
+
+[node name="ArtistNameLine" type="LineEdit" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+placeholder_text = "Leave blank if unknown"
+caret_blink = true
+
+[node name="PackLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+text = "Card Pack"
+horizontal_alignment = 2
+
+[node name="PackOptionButton" type="OptionButton" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "Tetramon"
+popup/item_0/id = 0
+popup/item_1/text = "Megabot"
+popup/item_1/id = 1
+popup/item_2/text = "FantasyRPG"
+popup/item_2/id = 2
+popup/item_3/text = "CatJob"
+popup/item_3/id = 3
+
+[node name="CardIDLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+text = "Card ID"
+horizontal_alignment = 2
+
+[node name="CardIDSpinBox" type="SpinBox" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ElementIndexLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+tooltip_text = "This is the frame of the card"
+mouse_filter = 1
+text = "Element Index"
+horizontal_alignment = 2
+
+[node name="ElementOptionButton" type="OptionButton" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+item_count = 8
+popup/item_0/text = "Fire"
+popup/item_0/id = 0
+popup/item_1/text = "Earth"
+popup/item_1/id = 1
+popup/item_2/text = "Wind"
+popup/item_2/id = 2
+popup/item_3/text = "Water"
+popup/item_3/id = 3
+popup/item_4/text = "Destiny"
+popup/item_4/id = 4
+popup/item_5/text = "Megabot"
+popup/item_5/id = 5
+popup/item_6/text = "FantasyRPG"
+popup/item_6/id = 6
+popup/item_7/text = "CatJob"
+popup/item_7/id = 7
+
+[node name="Rarity Label" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+tooltip_text = "This is the frame of the card"
+mouse_filter = 1
+text = "Rarity"
+horizontal_alignment = 2
+
+[node name="RarityOptionButton" type="OptionButton" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "Common"
+popup/item_0/id = 0
+popup/item_1/text = "Rare"
+popup/item_1/id = 1
+popup/item_2/text = "Epic"
+popup/item_2/id = 2
+popup/item_3/text = "Legendary"
+popup/item_3/id = 3
+
+[node name="RolesLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+tooltip_text = "This is the frame of the card"
+mouse_filter = 1
+text = "Roles"
+horizontal_alignment = 2
+
+[node name="RolesOptionButton" type="OptionButton" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+item_count = 8
+popup/item_0/text = "None"
+popup/item_0/id = 4
+popup/item_1/text = "PhysicalAttacker"
+popup/item_1/id = 0
+popup/item_2/text = "Defender"
+popup/item_2/id = 1
+popup/item_3/text = "Support"
+popup/item_3/id = 2
+popup/item_4/text = "Healer"
+popup/item_4/id = 3
+popup/item_5/text = "MagicalAttacker"
+popup/item_5/id = 5
+popup/item_6/text = "AllRounder"
+popup/item_6/id = 6
+popup/item_7/text = "Disruptor"
+popup/item_7/id = 7
+
+[node name="SkillsLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+tooltip_text = "This is the frame of the card"
+mouse_filter = 1
+text = "Skills"
+horizontal_alignment = 2
+
+[node name="SkillsOptionButton" type="OptionButton" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+tooltip_text = "This is the frame of the card"
+mouse_filter = 1
+text = "Card Description Box"
+horizontal_alignment = 2
+
+[node name="DescriptionLine" type="LineEdit" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+placeholder_text = "Card Description"
+caret_blink = true
+
+[node name="PreviousEvolutionLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+tooltip_text = "This is the frame of the card"
+mouse_filter = 1
+text = "Previous Evolution"
+horizontal_alignment = 2
+
+[node name="PreviousEvolutionLine" type="LineEdit" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+placeholder_text = "e.g. 563Gator Fort"
+caret_blink = true
+
+[node name="NextEvolutionLabel2" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+tooltip_text = "This is the frame of the card"
+mouse_filter = 1
+text = "Next Evolution"
+horizontal_alignment = 2
+
+[node name="NextEvolutionLine2" type="LineEdit" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer"]
+layout_mode = 2
+placeholder_text = "e.g. 563Gator Fort"
+caret_blink = true
+
+[node name="DataContainer2" type="GridContainer" parent="NewCards/NewCardCreatorDetails/CardData"]
+layout_mode = 2
+tooltip_text = "This data is unused at the
+current time in game but
+related stats show on card."
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="HPLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+layout_mode = 2
+text = "HP"
+horizontal_alignment = 2
+
+[node name="HPSpinBox" type="SpinBox" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+value = 36.0
+alignment = 1
+
+[node name="HPLevelAddLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+layout_mode = 2
+text = "HP Level Add"
+horizontal_alignment = 2
+
+[node name="HPLevelAddSpinBox" type="SpinBox" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="MagicLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+layout_mode = 2
+text = "Magic"
+horizontal_alignment = 2
+
+[node name="MagicSpinBox" type="SpinBox" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+value = 36.0
+alignment = 1
+
+[node name="MagicLevelAddLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+layout_mode = 2
+text = "Magic Level Add"
+horizontal_alignment = 2
+
+[node name="MagicLevelAddSpinBox" type="SpinBox" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="SpeedLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+layout_mode = 2
+text = "Speed"
+horizontal_alignment = 2
+
+[node name="SpeedSpinBox" type="SpinBox" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+value = 26.0
+alignment = 1
+
+[node name="SpeedLevelAddLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+layout_mode = 2
+text = "Speed Level Add"
+horizontal_alignment = 2
+
+[node name="SpeedLevelAddSpinBox" type="SpinBox" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="SpritLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+layout_mode = 2
+text = "Sprit"
+horizontal_alignment = 2
+
+[node name="SpritSpinBox" type="SpinBox" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+value = 10.0
+alignment = 1
+
+[node name="SpriteLevelAdddLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+layout_mode = 2
+text = "Sprit Level Add"
+horizontal_alignment = 2
+
+[node name="SpritLevelAddSpinBox" type="SpinBox" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="StrengthLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+layout_mode = 2
+text = "Strength"
+horizontal_alignment = 2
+
+[node name="StrengthSpinBox" type="SpinBox" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+value = 4.0
+alignment = 1
+
+[node name="StrengthLevelAddLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+layout_mode = 2
+text = "Strength Level Add"
+horizontal_alignment = 2
+
+[node name="StrengthLevelAddSpinBox" type="SpinBox" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="VitalityLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+layout_mode = 2
+text = "Vitality"
+horizontal_alignment = 2
+
+[node name="VitalitySpinBox" type="SpinBox" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+value = 1.0
+alignment = 1
+
+[node name="VitalityLevelAddLabel" type="Label" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+layout_mode = 2
+text = "Vitality Level Add"
+horizontal_alignment = 2
+
+[node name="VitalityLevelAddSpinBox" type="SpinBox" parent="NewCards/NewCardCreatorDetails/CardData/DataContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NewCards/NewCardCreatorDetails"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="GenerateButton" type="Button" parent="NewCards/NewCardCreatorDetails/HBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Generate"
+
+[node name="BackButton" type="Button" parent="NewCards/NewCardCreatorDetails/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
+
+[node name="Window" type="Window" parent="."]
+title = "Create A Card"
+size = Vector2i(300, 200)
+visible = false
+unresizable = true
+force_native = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Window"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = -15
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+text = "Do you already have images or will you make a new card?"
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="NewCardButton" type="Button" parent="Window/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "New Card"
+
+[node name="UseImageButton" type="Button" parent="Window/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Use Images"
+
+[node name="FilePicker" type="FileDialog" parent="."]
+title = "Open File(s)"
+ok_button_text = "Open"
+file_mode = 1
+access = 2
+use_native_dialog = true
+
+[node name="FilePicker2" type="FileDialog" parent="."]
+auto_translate_mode = 1
+title = "Open a File"
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+use_native_dialog = true
+
+[node name="UsingImages" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="ExistingCardDetails" type="VBoxContainer" parent="UsingImages"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="CardInfo" type="HBoxContainer" parent="UsingImages/ExistingCardDetails"]
+layout_mode = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="UsingImages/ExistingCardDetails/CardInfo"]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="Label" type="Label" parent="UsingImages/ExistingCardDetails/CardInfo/GridContainer"]
+layout_mode = 2
+text = "Pack To Add To"
+horizontal_alignment = 2
+
+[node name="PackAdditionOptionButton" type="OptionButton" parent="UsingImages/ExistingCardDetails/CardInfo/GridContainer"]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "Tetramon"
+popup/item_0/id = 0
+popup/item_1/text = "Megabot"
+popup/item_1/id = 1
+popup/item_2/text = "FantasyRPG"
+popup/item_2/id = 2
+popup/item_3/text = "CatJob"
+popup/item_3/id = 3
+
+[node name="Label2" type="Label" parent="UsingImages/ExistingCardDetails/CardInfo/GridContainer"]
+layout_mode = 2
+text = "Starting ID Number"
+horizontal_alignment = 2
+
+[node name="AdditionPackSpinBox" type="SpinBox" parent="UsingImages/ExistingCardDetails/CardInfo/GridContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label3" type="Label" parent="UsingImages/ExistingCardDetails/CardInfo/GridContainer"]
+layout_mode = 2
+text = "Counting up or down"
+horizontal_alignment = 2
+
+[node name="CountUpDownOptionButton" type="OptionButton" parent="UsingImages/ExistingCardDetails/CardInfo/GridContainer"]
+layout_mode = 2
+alignment = 1
+selected = 0
+item_count = 2
+popup/item_0/text = "Up"
+popup/item_0/id = 0
+popup/item_1/text = "Down"
+popup/item_1/id = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UsingImages/ExistingCardDetails"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="GenerateCards" type="Button" parent="UsingImages/ExistingCardDetails/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Generate Cards From Images"
+
+[node name="AnotherImageButton" type="Button" parent="UsingImages/ExistingCardDetails/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Another Image"
+
+[node name="BackButton" type="Button" parent="UsingImages/ExistingCardDetails/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
+
+[node name="PromptWindow" type="Window" parent="."]
+title = "Select Game Path"
+size = Vector2i(300, 200)
+visible = false
+unresizable = true
+force_native = true
+
+[node name="CenterContainer" type="CenterContainer" parent="PromptWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PromptWindow/CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PromptWindow/CenterContainer/HBoxContainer"]
+layout_mode = 2
+text = "Select your game location"
+
+[node name="BrowseButton" type="Button" parent="PromptWindow/CenterContainer/HBoxContainer"]
+layout_mode = 2
+text = "..."
+
+[node name="PathFileDialog" type="FileDialog" parent="."]
+title = "Open a Directory"
+ok_button_text = "Select Current Folder"
+file_mode = 2
+access = 2
+use_native_dialog = true
+
+[node name="FeedbackLabel" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -339.0
+offset_top = -41.5
+offset_right = 339.0
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=40] [outline_color=4b4539][outline_size=5] [color=Green]Card files created successfully[/color]"
+horizontal_alignment = 1
