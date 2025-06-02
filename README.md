@@ -22,7 +22,7 @@
 
 ## 🛠️ Getting Started
 
-1. **Download** the latest version from the [Releases](https://github.com/your-username/your-repo-name/releases).
+1. **Download** the latest version from the [Releases](https://github.com/newjoker6/TCG-Card-Creator-Mod-Tool/releases).
 2. **Run the tool** and fill out the form to create your custom card.
 3. **Import images** to customize your card artwork.
 4. **Export** the card — it's ready to be used with the game's modding system.
@@ -40,7 +40,7 @@ This tool is built to work seamlessly with:
 
 ## 🤝 Contributing
 
-Have a suggestion or found a bug? Feel free to [open an issue](https://github.com/your-username/your-repo-name/issues) or submit a pull request. Contributions are always welcome!
+Have a suggestion or found a bug? Feel free to [open an issue](https://github.com/newjoker6/TCG-Card-Creator-Mod-Tool/issues) or submit a pull request. Contributions are always welcome!
 
 ---
 
